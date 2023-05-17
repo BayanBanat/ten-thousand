@@ -1,9 +1,9 @@
-# LAB - Class_06
+# LAB - Class_06 $ Class_07
 # ten-thousand
 
 # Authors
-Navigatore : Ahmad Alanati
-Driver : Bayan Banat
+ Driver : Ahmad Alanati
+ Navigator: Bayan Banat
 
 # Setup
 .env  requirements
@@ -15,6 +15,7 @@ python -m venv .venv
 source .venv/bin/activate  
 pip install  
 python ten_thousand/game_logic.py
+python ten_thousand/game.py
 
 # How to use your library
 

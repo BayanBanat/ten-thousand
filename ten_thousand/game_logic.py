@@ -2,8 +2,9 @@ import random
 
 class GameLogic:
     def __init__(self):
-        self.score=0
-        self.dice=[]
+        # self.score=0
+        # self.dice=[]
+        pass
 
     @staticmethod
     def calculate_score(dic_tuple):
