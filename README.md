@@ -1,9 +1,9 @@
-# LAB - Class_06 $ Class_07
+# LAB - Class_06 $ Class_06
 # ten-thousand
 
 # Authors
- Driver : Ahmad Alanati
- Navigator: Bayan Banat
+Navigator: Ahmad Alanati
+Driver : Bayan Banat
 
 # Setup
 .env  requirements
