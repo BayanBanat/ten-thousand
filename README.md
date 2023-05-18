@@ -14,8 +14,10 @@ Driver : Bayan Banat
 python -m venv .venv
 source .venv/bin/activate  
 pip install  
-python ten_thousand/game_logic.py
-python ten_thousand/game.py
+
+// version_1   >>>>  python ten_thousand/game_logic.py
+
+// version_2   >>>>  python ten_thousand/game.py
 
 # How to use your library
 
