@@ -36,10 +36,19 @@ class GameLogic:
         
         if straight==6 or pairs==3: # check for pairs and straight value
             score=1500
-
-        
-
         return score
+    
+    @staticmethod
+    def validate_keepers(roll, keepers):
+        roll_list = list(roll)
+        keepers_list = list(keepers)
+        for element in keepers_list:
+            if element in roll_list:
+                roll_list.remove(int(element))
+            else:
+                return False
+        return True
+
     
     @staticmethod
     def roll_dice(number):
