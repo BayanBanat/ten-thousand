@@ -1,14 +1,16 @@
-from game_logic import GameLogic
+try:
+    from ten_thousand.game_logic import GameLogic
+except:
+    from game_logic import GameLogic
 from sys import exit
-from collections import Counter
-import re
+# from collections import Counter
 
 class Game:
     
     @staticmethod
     def welcoming_message():
-        print( """Welcome to Ten Thousand
-(y)es to play or (n)o to decline""")
+        print( "Welcome to Ten Thousand")
+        print("(y)es to play or (n)o to decline")
         
     @staticmethod
     def user_input():
@@ -40,15 +42,16 @@ class Game:
     @staticmethod
     def rounds(num):
         score=0
+        if num >20:
+            return False
         print (f"Starting round {num}")
-    
         dices = Game.get_dicees(6)
         print("Enter dice to keep, or (q)uit:")
         saved_dices = []
         Cheater = False
         while True:
             user_number=Game.user_input().replace(" ","")
-            if user_number.lower()=="q":
+            if user_number.lower()=="q" :
                 return False
             if user_number.lower()!= "b" and user_number.lower()!="r":
                 dice_check = dices.copy()
@@ -70,11 +73,11 @@ class Game:
                 score += GameLogic.calculate_score(tuple(saved_dices))
                 lst_number=[element for element in dice_check]
                 # print(lst_number)
-                dices_count = Counter(saved_dices)
+                # dices_count = Counter(saved_dices)
                 # print(all(dice ==2 for dice in dices_count.values()))
-                if len(saved_dices) == 6 and score>0:
+                if len(GameLogic.get_scorers(dices)) == len(dices):
                     lst_number=[0,0,0,0,0,0]
-                    saved_dices.clear()
+                saved_dices.clear()
                 dices=tuple(lst_number)
                 print(f"You have {score} unbanked points and {len(lst_number)} dice remaining")
             elif user_number.lower()=="b":
@@ -99,25 +102,24 @@ class Game:
         exit(string)
 
     @staticmethod       
-    def play():
+    def play(num_rounds = 20):
         Game.welcoming_message()
         total_score=0
         round=1
         play_or_not=Game.user_input()
-        while True:
-            if play_or_not.lower() =="y":
+        if play_or_not.lower() =="y":
+            while True:
                 round_return=Game.rounds(round)
                 if not round_return and isinstance(round_return,bool):
-                    break
+                    print(f"Thanks for playing. You earned {total_score} points")
+                    Game.end_game("")
                 total_score += round_return
                 print(f"Total score is {total_score} points")
                 round+=1
-
-            else:
+        else:
                 Game.end_game("OK. Maybe another time")
                 return
-            
-        Game.end_game(f"Thanks for playing. You earned {total_score} points")
+        
 
 
 

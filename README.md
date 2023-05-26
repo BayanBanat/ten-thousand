@@ -6,7 +6,7 @@
 Navigator: Ahmad Alanati
 Driver : Bayan Banat
 
-## Lab_08
+## Lab_08 $ Lab_09
 Navigator: Bayan Banat 
 Driver: Ahmad Alanati
 
@@ -25,6 +25,8 @@ pip install
 // version_2   >>>>  python ten_thousand/game.py
 
 // version_3   >>>>  python ten_thousand/game.py
+
+// version_4   >>>>  python bots.py
 
 # How to use your library
 
