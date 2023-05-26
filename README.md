@@ -1,9 +1,14 @@
-# LAB - Class_06 $ Class_06
+# LAB - Lab_06 $ Lab_07 $ Lab_08
 # ten-thousand
 
 # Authors
+## Lab_06 $ Lab_07
 Navigator: Ahmad Alanati
 Driver : Bayan Banat
+
+## Lab_08
+Navigator: Bayan Banat 
+Driver: Ahmad Alanati
 
 # Setup
 .env  requirements
@@ -19,6 +24,8 @@ pip install
 
 // version_2   >>>>  python ten_thousand/game.py
 
+// version_3   >>>>  python ten_thousand/game.py
+
 # How to use your library
 
 
@@ -31,4 +38,4 @@ None
 
 Describe any tests that you did not complete, skipped, etc
 
-All tests are complited 
+All tests are complited
